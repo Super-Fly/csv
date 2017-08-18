@@ -156,15 +156,10 @@ trait Controls
      *
      * @param string $enclosure
      *
-     * @throws InvalidArgumentException If $enclosure is not a single character
-     *
      * @return $this
      */
     public function setEnclosure($enclosure)
     {
-        if (!$this->isValidCsvControls($enclosure)) {
-            throw new InvalidArgumentException('The enclosure must be a single character');
-        }
         $this->enclosure = $enclosure;
 
         return $this;
